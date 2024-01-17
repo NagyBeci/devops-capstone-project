@@ -42,7 +42,7 @@ def index():
 def create_accounts():
     """
     Creates an Account
-    This endpoint will create an Account based the data in the body that is posted
+    This endpoint will create an Account based on the data in the body that is posted
     """
     app.logger.info("Request to create an Account")
     check_content_type("application/json")
@@ -61,28 +61,37 @@ def create_accounts():
 # LIST ALL ACCOUNTS
 ######################################################################
 
-# ... place you code here to LIST accounts ...
+# ... place your code here to LIST accounts ...
 
 
 ######################################################################
 # READ AN ACCOUNT
 ######################################################################
 
-# ... place you code here to READ an account ...
+@app.route("/accounts/<int:account_id>", methods=["GET"])
+def get_account(account_id):
+    """
+    Reads a single Account
+    This endpoint will return an Account based on the provided account_id.
+    """
+    account = Account.find(account_id)  # Replace with your actual data retrieval logic
+    if not account:
+        abort(404, description=f"Account with id {account_id} could not be found.")
 
+    return jsonify(account.serialize()), 200
 
 ######################################################################
 # UPDATE AN EXISTING ACCOUNT
 ######################################################################
 
-# ... place you code here to UPDATE an account ...
+# ... place your code here to UPDATE an account ...
 
 
 ######################################################################
 # DELETE AN ACCOUNT
 ######################################################################
 
-# ... place you code here to DELETE an account ...
+# ... place your code here to DELETE an account ...
 
 
 ######################################################################
