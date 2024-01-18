@@ -1,4 +1,4 @@
-# Pin dependancies that might cause breakage
+# Pin dependencies that might cause breakage
 Werkzeug==2.1.2
 SQLAlchemy==1.4.46
 
@@ -11,6 +11,7 @@ python-dotenv==0.20.0
 # Runtime dependencies
 gunicorn==20.1.0
 honcho==1.1.0
+Flask-Talisman
 
 # Code quality
 pylint==2.14.0
