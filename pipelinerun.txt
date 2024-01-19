@@ -246,7 +246,7 @@
 [tests : nosetests] service/models.py                     69      3    96%   32, 98, 127
 [tests : nosetests] service/routes.py                     55      1    98%   112
 [tests : nosetests] ----------------------------------------------------------------
-[tests : nosetests] TOTAL                                252     16    96%
+[tests : nosetests] TOTAL                                252     16    94%
 [tests : nosetests] ----------------------------------------------------------------------
 [tests : nosetests] Ran 25 tests in 2.915s
 [tests : nosetests] 
